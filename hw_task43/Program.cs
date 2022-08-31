@@ -15,8 +15,17 @@ double k2 = PrintNumber();
 double x = (b2 - b1) / (k1 - k2);
 double y = k1 * x + b1;
 
-Console.WriteLine();
-Console.WriteLine($"(x = {x}; y = {y}) - координаты точки пересечения прямых: y={k1}x+{b1} и y={k2}x+{b2}");
+if (k1 == k2)
+
+    {
+        Console.WriteLine();
+        Console.WriteLine($"не пересекаются прямые: y={k1}x+{b1} и y={k2}x+{b2}");
+    }
+    else
+    {
+        Console.WriteLine();
+        Console.WriteLine($"(x = {x}; y = {y}) - координаты точки пересечения прямых: y={k1}x+{b1} и y={k2}x+{b2}");
+    }
 
 
 int PrintNumber()
